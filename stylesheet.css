@@ -1018,8 +1018,10 @@ body {
 
 .profile-photo img {
   width: 85%;
-  max-width: 210px;
-  height: auto;
+  max-width: 190px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: 50% 48%;
   border: 1px solid #ece8e1;
   border-radius: 8px;
 }

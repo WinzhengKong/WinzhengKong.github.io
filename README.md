@@ -19,7 +19,5 @@ Then visit <http://127.0.0.1:8080>.
 - Education and awards
 - Downloadable CV in `assets/Wenzheng_Jiang_CV.pdf`
 
-The page is static and has no build dependencies. Update profile content in `index.html`
-and visual styling in `stylesheet.css`. To add a portrait, replace
-`images/profile-photo-placeholder.svg` with your image and update the corresponding
-`src` in `index.html`.
+The page is static and has no build dependencies. Update profile content in `index.html`,
+visual styling in `stylesheet.css`, and the portrait in `images/profile-photo.png`.
