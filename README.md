@@ -1,6 +1,6 @@
 # Wenzheng Jiang — Academic Homepage
 
-A lightweight, responsive academic homepage for Wenzheng Jiang, adapted from the
+A lightweight academic homepage for Wenzheng Jiang, adapted from the layout and style of the
 [`w-r-s/academic-homepage-template`](https://github.com/w-r-s/academic-homepage-template).
 
 ## Preview locally
