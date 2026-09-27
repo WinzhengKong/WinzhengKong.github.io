@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">WZ monogram</title>
+  <defs>
+    <linearGradient id="background" x1="8" y1="6" x2="56" y2="58" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#d58a24"/>
+      <stop offset="1" stop-color="#a95e0c"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="15" fill="url(#background)"/>
+  <text x="32" y="41" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="800" letter-spacing="-1" text-anchor="middle">WZ</text>
+</svg>
