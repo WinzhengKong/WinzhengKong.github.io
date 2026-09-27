@@ -17,7 +17,6 @@ Then visit <http://127.0.0.1:8080>.
 - News and publication filters
 - Seven published papers and two under-review manuscripts
 - Education and awards
-- Downloadable CV in `assets/Wenzheng_Jiang_CV.pdf`
 
 The page is static and has no build dependencies. Update profile content in `index.html`,
 visual styling in `stylesheet.css`, and the portrait in `images/profile-photo.png`.
