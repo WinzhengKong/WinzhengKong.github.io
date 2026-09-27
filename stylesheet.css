@@ -1156,6 +1156,22 @@ body {
   margin-bottom: 0;
 }
 
+.paper-figure-link {
+  display: block;
+  width: 100%;
+  line-height: 0;
+}
+
+.paper-figure {
+  display: block;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  background: #fff;
+}
+
 .paper-thumb {
   width: 190px;
   max-width: 100%;
