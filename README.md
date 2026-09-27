@@ -15,7 +15,7 @@ Then visit <http://127.0.0.1:8080>.
 
 - Biography and research interests
 - News and publication filters
-- Seven published papers and two under-review manuscripts
+- Seven published papers
 - Education and awards
 
 The page is static and has no build dependencies. Update profile content in `index.html`,
