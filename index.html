@@ -47,7 +47,7 @@
 
         <section id="news" class="page-section content-section">
           <heading>News</heading>
-          <ul class="news-list compact-news expanded" tabindex="0" aria-label="News. Scroll to view older entries.">
+          <ul class="news-list compact-news" id="newsList">
             <li class="news-item"><span class="news-date-badge">Aug. 2026</span><span class="news-text"><strong>ReFrame</strong> was accepted to <strong>Findings of EMNLP 2026</strong>.</span></li>
             <li class="news-item"><span class="news-date-badge">May 2026</span><span class="news-text">Received the <strong>ICML 2026 Gold Reviewer Award</strong>.</span></li>
             <li class="news-item"><span class="news-date-badge">Mar. 2026</span><span class="news-text">I began pursuing my Ph.D. in Computer Science and Technology at NUDT.</span></li>
@@ -57,6 +57,7 @@
             <li class="news-item"><span class="news-date-badge">Nov. 2025</span><span class="news-text"><strong>PurMM</strong> was accepted for an <strong>Oral Presentation</strong> at AAAI 2026.</span></li>
             <li class="news-item"><span class="news-date-badge">Sep. 2025</span><span class="news-text"><strong>Gains</strong> was accepted at NeurIPS 2025.</span></li>
           </ul>
+          <button class="news-toggle" id="newsToggle" type="button" aria-controls="newsList" aria-expanded="false">More &darr;</button>
         </section>
 
         <section id="publications" class="page-section content-section">
@@ -213,15 +214,13 @@
   <script>
     (function () {
       const newsList = document.querySelector('.compact-news');
-      function sizeNewsList() {
-        const newsItems = Array.from(newsList.querySelectorAll('.news-item')).slice(0, 5);
-        const visibleHeight = newsItems.reduce(function (height, item) { return height + item.getBoundingClientRect().height; }, 0);
-        newsList.style.maxHeight = visibleHeight + 'px';
-      }
-      sizeNewsList();
-      window.addEventListener('load', sizeNewsList);
-      if (document.fonts && document.fonts.ready) document.fonts.ready.then(sizeNewsList);
-      window.addEventListener('resize', sizeNewsList, { passive: true });
+      const newsToggle = document.getElementById('newsToggle');
+      if (newsList.querySelectorAll('.news-item').length > 5) newsToggle.classList.add('visible');
+      newsToggle.addEventListener('click', function () {
+        const expanded = newsList.classList.toggle('expanded');
+        newsToggle.setAttribute('aria-expanded', String(expanded));
+        newsToggle.innerHTML = expanded ? 'Less &uarr;' : 'More &darr;';
+      });
 
       const rows = Array.from(document.querySelectorAll('.publication-row'));
       document.querySelectorAll('.tag-btn').forEach(function (button) {
