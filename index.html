@@ -71,7 +71,7 @@
             <button class="tag-btn" type="button" data-tag="agents">Agents &amp; RL</button>
           </div>
 
-          <table class="publications-table" style="width:100%;border:0;border-spacing:0 16px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <table class="publications-table" id="publicationTable" style="width:100%;border:0;border-spacing:0 16px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr class="publication-row featured-paper" data-tags="ai-safety,federated">
               <td class="paper-image-cell"><a class="paper-figure-link" href="images/papers/fkge-framework.png" target="_blank" rel="noreferrer" title="Open the full FKGE framework figure"><img class="paper-figure" src="images/papers/fkge-framework.png" alt="Framework of the FKGE poisoning attacks and learning-based defense"></a></td>
               <td class="paper-info-cell">
@@ -157,6 +157,7 @@
               </td>
             </tr>
           </tbody></table>
+          <button class="news-toggle publication-toggle" id="publicationToggle" type="button" aria-controls="publicationTable" aria-expanded="false">More &darr;</button>
         </section>
 
         <section id="education" class="page-section content-section">
@@ -223,6 +224,19 @@
       });
 
       const rows = Array.from(document.querySelectorAll('.publication-row'));
+      const publicationToggle = document.getElementById('publicationToggle');
+      let activePublicationTag = 'all';
+      let publicationsExpanded = false;
+      function renderPublications() {
+        const matchingRows = rows.filter(function (row) {
+          return activePublicationTag === 'all' || row.dataset.tags.split(',').includes(activePublicationTag);
+        });
+        const visibleRows = publicationsExpanded ? matchingRows : matchingRows.slice(0, 5);
+        rows.forEach(function (row) { row.style.display = visibleRows.includes(row) ? '' : 'none'; });
+        publicationToggle.classList.toggle('visible', matchingRows.length > 5);
+        publicationToggle.setAttribute('aria-expanded', String(publicationsExpanded));
+        publicationToggle.innerHTML = publicationsExpanded ? 'Less &uarr;' : 'More &darr;';
+      }
       document.querySelectorAll('.tag-btn').forEach(function (button) {
         const tag = button.dataset.tag;
         const count = tag === 'all' ? rows.length : rows.filter(function (row) { return row.dataset.tags.split(',').includes(tag); }).length;
@@ -230,9 +244,16 @@
         button.addEventListener('click', function () {
           document.querySelectorAll('.tag-btn').forEach(function (item) { item.classList.remove('active'); });
           button.classList.add('active');
-          rows.forEach(function (row) { row.style.display = tag === 'all' || row.dataset.tags.split(',').includes(tag) ? '' : 'none'; });
+          activePublicationTag = tag;
+          publicationsExpanded = false;
+          renderPublications();
         });
       });
+      publicationToggle.addEventListener('click', function () {
+        publicationsExpanded = !publicationsExpanded;
+        renderPublications();
+      });
+      renderPublications();
       const backToTop = document.getElementById('backToTop');
       window.addEventListener('scroll', function () { backToTop.classList.toggle('visible', window.scrollY > 300); }, { passive: true });
       backToTop.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
