@@ -1135,8 +1135,38 @@ body {
 
 .compact-news {
   margin: 2px 0 0;
-  padding: 0;
+  max-height: 150px;
+  padding: 0 10px 0 0;
   border: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-color: rgba(173, 112, 32, 0.55) rgba(251, 165, 36, 0.08);
+  scrollbar-width: thin;
+  overscroll-behavior: contain;
+}
+
+.compact-news:focus-visible {
+  outline: 1px solid rgba(173, 112, 32, 0.45);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.compact-news::-webkit-scrollbar {
+  width: 7px;
+}
+
+.compact-news::-webkit-scrollbar-track {
+  border-radius: 8px;
+  background: rgba(251, 165, 36, 0.08);
+}
+
+.compact-news::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: rgba(173, 112, 32, 0.55);
+}
+
+.compact-news::-webkit-scrollbar-thumb:hover {
+  background: rgba(173, 112, 32, 0.78);
 }
 
 .compact-news::before {

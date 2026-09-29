@@ -47,7 +47,7 @@
 
         <section id="news" class="page-section content-section">
           <heading>News</heading>
-          <ul class="news-list compact-news expanded">
+          <ul class="news-list compact-news expanded" tabindex="0" aria-label="News. Scroll to view older entries.">
             <li class="news-item"><span class="news-date-badge">Aug. 2026</span><span class="news-text"><strong>ReFrame</strong> was accepted to <strong>Findings of EMNLP 2026</strong>.</span></li>
             <li class="news-item"><span class="news-date-badge">May 2026</span><span class="news-text">Received the <strong>ICML 2026 Gold Reviewer Award</strong>.</span></li>
             <li class="news-item"><span class="news-date-badge">Mar. 2026</span><span class="news-text">I began pursuing my Ph.D. in Computer Science and Technology at NUDT.</span></li>
@@ -212,6 +212,17 @@
   </button>
   <script>
     (function () {
+      const newsList = document.querySelector('.compact-news');
+      function sizeNewsList() {
+        const newsItems = Array.from(newsList.querySelectorAll('.news-item')).slice(0, 5);
+        const visibleHeight = newsItems.reduce(function (height, item) { return height + item.getBoundingClientRect().height; }, 0);
+        newsList.style.maxHeight = visibleHeight + 'px';
+      }
+      sizeNewsList();
+      window.addEventListener('load', sizeNewsList);
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(sizeNewsList);
+      window.addEventListener('resize', sizeNewsList, { passive: true });
+
       const rows = Array.from(document.querySelectorAll('.publication-row'));
       document.querySelectorAll('.tag-btn').forEach(function (button) {
         const tag = button.dataset.tag;
