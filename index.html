@@ -234,9 +234,9 @@
         const matchingRows = rows.filter(function (row) {
           return activePublicationTag === 'all' || row.dataset.tags.split(',').includes(activePublicationTag);
         });
-        const visibleRows = publicationsExpanded ? matchingRows : matchingRows.slice(0, 5);
+        const visibleRows = publicationsExpanded ? matchingRows : matchingRows.slice(0, 2);
         rows.forEach(function (row) { row.style.display = visibleRows.includes(row) ? '' : 'none'; });
-        publicationToggle.classList.toggle('visible', matchingRows.length > 5);
+        publicationToggle.classList.toggle('visible', matchingRows.length > 2);
         publicationToggle.setAttribute('aria-expanded', String(publicationsExpanded));
         publicationToggle.innerHTML = publicationsExpanded ? 'Less &uarr;' : 'More &darr;';
       }
