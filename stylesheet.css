@@ -370,6 +370,10 @@ heading {
   font-size: 14px;
   color: #333;
 }
+
+.news-text strong {
+  font-weight: 700;
+}
 .news-text .venue {
   font-weight: 700;
   color: #b47a00;
