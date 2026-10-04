@@ -1279,8 +1279,27 @@ body {
 }
 
 .degree-cell {
-  width: 74px;
+  width: 116px;
   text-align: center;
+}
+
+.degree-with-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.education-logo {
+  display: block;
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+  object-fit: contain;
+}
+
+.nudt-logo {
+  background: url('images/education/nudt.png') -30.84px -5.23px / 107.51px 56.45px no-repeat;
 }
 
 .degree-cell span {
