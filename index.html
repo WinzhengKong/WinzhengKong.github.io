@@ -202,9 +202,9 @@
       <div class="mountain-fallback" style="display:none;"></div>
       <div class="mountain-content">
         <h2>Keep Exploring</h2>
-        <p class="mountain-sub">Do what matters, even when it is hard.</p>
+        <p class="mountain-sub">Surpass predecessors, surpass yourself, surpass rivals.</p>
         <a href="mailto:jiangwenzheng@nudt.edu.cn" class="mountain-cta"><span>Get in Touch</span></a>
-        <p class="mountain-footnote"><span>Wenzheng Jiang</span><span class="mountain-updated">Last updated: September 2026.</span></p>
+        <p class="mountain-footnote"><span>Wenzheng Jiang</span><span class="mountain-updated">Last updated: September 2026.</span><span id="busuanzi_container_site_uv" style="display:none;"><span aria-hidden="true">👀</span> Visitors: <span id="busuanzi_value_site_uv"></span></span></p>
       </div>
     </div>
   </section>
@@ -259,6 +259,19 @@
       const backToTop = document.getElementById('backToTop');
       window.addEventListener('scroll', function () { backToTop.classList.toggle('visible', window.scrollY > 300); }, { passive: true });
       backToTop.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    })();
+  </script>
+  <script>
+    (function () {
+      // Only count visits to the published homepage, never local previews.
+      if (window.location.protocol !== 'https:' || window.location.hostname !== 'winzhengkong.github.io') return;
+      const counterScript = document.createElement('script');
+      counterScript.async = true;
+      counterScript.src = 'https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js';
+      counterScript.onerror = function () {
+        document.getElementById('busuanzi_container_site_uv').style.display = 'none';
+      };
+      document.head.appendChild(counterScript);
     })();
   </script>
 </body>

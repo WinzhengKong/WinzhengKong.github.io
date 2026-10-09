@@ -20,3 +20,15 @@ Then visit <http://127.0.0.1:8080>.
 
 The page is static and has no build dependencies. Update profile content in `index.html`,
 visual styling in `stylesheet.css`, and the portrait in `images/profile-photo.png`.
+
+## Visitor counter
+
+The footer displays the site-level visitor count provided by
+[Busuanzi](https://ibruce.info/2015/04/04/busuanzi/). It loads only on
+`https://winzhengkong.github.io`, not in local previews. If the production domain
+changes, update the hostname check in `index.html`.
+
+This is the provider's cumulative visitor metric, not the number of people
+currently online or an exact count of distinct individuals. Visitors' browsers
+send requests to the third-party service; its availability and counting rules
+determine the displayed number. The counter stays hidden if no result is returned.
