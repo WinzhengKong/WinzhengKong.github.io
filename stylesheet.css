@@ -374,6 +374,17 @@ heading {
 .news-text strong {
   font-weight: 700;
 }
+.news-text a,
+.news-text a:visited,
+.news-text a:hover,
+.news-text a:focus {
+  color: inherit;
+}
+.news-text a:hover,
+.news-text a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
 .news-text .venue {
   font-weight: 700;
   color: #b47a00;
