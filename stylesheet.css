@@ -1144,11 +1144,11 @@ body {
 }
 
 .is-rotating .profile-role-labels > span:first-child {
-  animation: role-primary 8s ease-in-out infinite;
+  animation: role-primary 4s ease-in-out infinite;
 }
 
 .is-rotating .profile-role-labels > span:last-child {
-  animation: role-secondary 8s ease-in-out infinite;
+  animation: role-secondary 4s ease-in-out infinite;
 }
 
 .profile-role.is-suspended .profile-role-labels > span {
