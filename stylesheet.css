@@ -249,7 +249,7 @@ strong {
 
 heading {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 25px;
+  font-size: 28px;
   /*color: #313164;*/
   text-decoration: underline;
   text-decoration-style: solid;
@@ -782,7 +782,7 @@ span.highlight {
 .mountain-stage {
   position: relative;
   width: 100%;
-  min-height: 360px;
+  min-height: 460px;
   overflow: hidden;
 }
 
@@ -830,13 +830,13 @@ span.highlight {
 .mountain-content {
   position: relative;
   z-index: 3;
-  min-height: 360px;
+  min-height: 460px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 40px 26px 30px;
+  padding: 48px 34px 36px;
   text-align: center;
 }
 
@@ -852,7 +852,7 @@ span.highlight {
 }
 
 .mountain-content .mountain-sub {
-  max-width: 680px;
+  max-width: 900px;
   margin: 0 auto 22px;
   color: rgba(255,255,255,0.96);
   font-size: clamp(14px, 1.6vw, 16px);
@@ -864,13 +864,13 @@ span.highlight {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 12px 28px;
+  padding: 14px 34px;
   border: 1px solid rgba(255,255,255,0.85);
   border-radius: 8px;
   background: #fff;
   color: #735120;
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 700;
   line-height: 1;
   text-decoration: none;
@@ -892,10 +892,10 @@ span.highlight {
 }
 
 .mountain-footnote {
-  max-width: 620px;
-  margin: 24px auto 0;
+  max-width: 840px;
+  margin: 28px auto 0;
   color: rgba(255,255,255,0.86);
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.5;
   text-shadow: 0 1px 6px rgba(20,40,70,0.35);
 }
@@ -1019,9 +1019,9 @@ span.highlight {
 /* Wenzheng Jiang content overrides. The base layout above is kept from the
    original academic-homepage-template preview. */
 :root {
-  --homepage-width: 800px;
-  --panel-inset: 20px;
-  --panel-gap: 20px;
+  --homepage-width: 1120px;
+  --panel-inset: 28px;
+  --panel-gap: 28px;
   --panel-radius: 20px;
   --panel-border: #e9dfcf;
   --panel-shadow: 0 8px 28px rgba(75, 53, 22, 0.045);
@@ -1035,19 +1035,19 @@ body {
 .profile-table {
   width: 100%;
   max-width: var(--homepage-width);
-  padding-top: 28px;
+  padding-top: 36px;
 }
 
 .profile-card {
   position: relative;
   isolation: isolate;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 170px;
+  grid-template-columns: minmax(0, 1fr) 235px;
   grid-template-areas: "header sidebar" "bio sidebar";
-  column-gap: 26px;
-  row-gap: 18px;
+  column-gap: 34px;
+  row-gap: 24px;
   margin: 0 var(--panel-inset);
-  padding: 28px;
+  padding: 36px;
   overflow: hidden;
   border: 1px solid var(--panel-border);
   border-radius: var(--panel-radius);
@@ -1061,8 +1061,8 @@ body {
   content: '';
   position: absolute;
   top: 0;
-  left: 28px;
-  width: 62px;
+  left: 36px;
+  width: 86px;
   height: 3px;
   border-radius: 0 0 3px 3px;
   background: #b78438;
@@ -1090,7 +1090,7 @@ body {
   margin: 0;
   color: #242d36;
   font-family: 'Lato', Verdana, Helvetica, 'Microsoft YaHei', 'PingFang SC', sans-serif;
-  font-size: 28px;
+  font-size: 33px;
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.025em;
@@ -1101,7 +1101,7 @@ body {
   border-left: 1px solid #ddcfba;
   color: inherit;
   font-family: inherit;
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 700;
   letter-spacing: 0.12em;
   white-space: nowrap;
@@ -1110,11 +1110,11 @@ body {
 .profile-role {
   display: flex;
   align-items: center;
-  height: 22px;
+  height: 24px;
   margin: 10px 0 0;
   color: #7d7262;
-  font-size: 12px;
-  line-height: 22px;
+  font-size: 13px;
+  line-height: 24px;
   letter-spacing: 0.025em;
 }
 
@@ -1131,7 +1131,7 @@ body {
 .profile-role-labels {
   display: grid;
   min-width: 0;
-  height: 22px;
+  height: 24px;
 }
 
 .profile-role-labels > span {
@@ -1208,7 +1208,7 @@ body {
 .profile-photo img {
   display: block;
   width: 100%;
-  max-width: 190px;
+  max-width: 235px;
   height: auto;
   box-sizing: border-box;
   margin: 0 auto;
@@ -1235,9 +1235,9 @@ body {
 .profile-contacts {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  gap: 8px;
-  margin-top: 18px;
-  padding-top: 16px;
+  gap: 10px;
+  margin-top: 22px;
+  padding-top: 20px;
   border-top: 1px solid #e9dfcf;
 }
 
@@ -1246,8 +1246,8 @@ body {
   align-items: center;
   justify-content: center;
   gap: 6px;
-  min-height: 36px;
-  padding: 0 11px;
+  min-height: 44px;
+  padding: 0 14px;
   box-sizing: border-box;
   border: 1px solid #e4d7c2;
   border-radius: 8px;
@@ -1265,7 +1265,7 @@ body {
 
 .content-section {
   margin: var(--panel-gap) var(--panel-inset) 0;
-  padding: 24px 26px;
+  padding: 30px 34px;
   border: 1px solid var(--panel-border);
   border-radius: var(--panel-radius);
   background: #fffefa;
@@ -1274,11 +1274,11 @@ body {
 
 .content-section > heading {
   display: block;
-  margin-bottom: 18px;
-  padding-bottom: 12px;
+  margin-bottom: 22px;
+  padding-bottom: 14px;
   border-bottom: 1px solid var(--panel-border);
   color: #242d36;
-  font-size: 21px;
+  font-size: 28px;
   font-weight: 700;
   line-height: 1.3;
   text-decoration: none;
@@ -1423,13 +1423,13 @@ body {
 
 .paper-image-cell {
   width: 30%;
-  padding: 20px;
+  padding: 26px;
   vertical-align: middle;
 }
 
 .paper-info-cell {
   width: 70%;
-  padding: 20px;
+  padding: 26px;
   vertical-align: middle;
 }
 
@@ -1527,7 +1527,7 @@ body {
 }
 
 .review-list li {
-  padding: 10px 0;
+  padding: 13px 0;
   border-bottom: 1px solid #eee;
 }
 
@@ -1536,7 +1536,7 @@ body {
 }
 
 .service-list li {
-  padding: 7px 0;
+  padding: 9px 0;
   line-height: 1.6;
 }
 
@@ -1545,12 +1545,12 @@ body {
 }
 
 .education-table td {
-  padding: 14px 8px;
+  padding: 18px 12px;
   vertical-align: middle;
 }
 
 .degree-cell {
-  width: 116px;
+  width: 160px;
   text-align: center;
 }
 
@@ -1563,32 +1563,32 @@ body {
 
 .education-logo {
   display: block;
-  width: 46px;
-  height: 46px;
-  flex: 0 0 46px;
+  width: 64px;
+  height: 64px;
+  flex: 0 0 64px;
   object-fit: contain;
 }
 
 .nudt-logo {
-  background: url('images/education/nudt.png') -30.84px -5.23px / 107.51px 56.45px no-repeat;
+  background: url('images/education/nudt.png') -42.91px -7.28px / 149.58px 78.53px no-repeat;
 }
 
 .degree-cell span {
   display: inline-flex;
-  min-width: 46px;
-  min-height: 46px;
+  min-width: 64px;
+  min-height: 64px;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   background: #ad7020;
   color: #fff;
   font-family: Georgia, serif;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: bold;
 }
 
 .date-cell {
-  width: 160px;
+  width: 200px;
   color: #666;
   text-align: right;
   white-space: nowrap;
@@ -1601,10 +1601,10 @@ body {
 }
 
 .award-list li {
-  padding: 5px 0;
+  padding: 7px 0;
   display: flex;
   justify-content: space-between;
-  gap: 24px;
+  gap: 30px;
 }
 
 .award-list time {
