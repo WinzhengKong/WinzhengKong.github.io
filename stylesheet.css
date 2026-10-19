@@ -1627,31 +1627,28 @@ body {
   right: 0;
   z-index: 5;
   display: flex;
-  gap: 4px;
-  padding: 4px;
-  border: 1px solid var(--panel-border);
-  border-radius: 12px;
-  background: #fffefa;
-  box-shadow: var(--panel-shadow);
+  gap: 6px;
 }
 
 .lang-btn {
-  min-width: 36px;
-  padding: 4px 10px;
-  border: 1px solid transparent;
+  min-width: 42px;
+  padding: 4px 12px;
+  border: 1px solid #e4d7c2;
   border-radius: 8px;
-  background: transparent;
-  color: #8a7a5f;
+  background: #fff;
+  color: #7a6a4f;
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.08em;
-  line-height: 1.5;
+  line-height: 1.6;
   cursor: url('images/icon/cursor-pointer.png'), pointer;
-  transition: color 160ms ease, background 160ms ease, border-color 160ms ease;
+  transition: border-color 160ms ease, background 160ms ease, color 160ms ease;
 }
 
 .lang-btn:hover {
+  border-color: #b88c4b;
+  background: #fbf4e8;
   color: #5a4a2f;
 }
 
