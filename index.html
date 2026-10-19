@@ -20,7 +20,13 @@
               <span>Wenzheng Jiang</span>
               <span class="profile-name-cn" lang="zh-CN">江文钲</span>
             </h1>
-            <p class="profile-role">Reliable &amp; Trustworthy AI</p>
+            <div class="profile-role">
+              <span class="profile-role-summary">Research interests: Reliable &amp; Trustworthy AI; LLM &amp; Agent.</span>
+              <span class="profile-role-labels" aria-hidden="true">
+                <span>Reliable &amp; Trustworthy AI</span>
+                <span>LLM &amp; Agent</span>
+              </span>
+            </div>
           </header>
           <div class="profile-copy">
               <p>
@@ -44,7 +50,7 @@
           </div>
           <aside class="profile-sidebar" aria-label="Portrait and contact links">
           <figure class="profile-photo">
-            <img src="images/profile-photo.png" alt="Portrait of Wenzheng Jiang">
+            <img src="images/profile-photo-bridge-fixed-v2.png" alt="Portrait of Wenzheng Jiang">
             <figcaption><span class="profile-photo-title">Ph.D. Student</span><span>Computer Science &amp; Technology</span></figcaption>
           </figure>
           <nav class="profile-contacts contact-links" aria-label="Contact and academic profiles">
@@ -224,6 +230,16 @@
   </button>
   <script>
     (function () {
+      const profileRole = document.querySelector('.profile-role');
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      function syncRoleRotation() {
+        profileRole.classList.toggle('is-rotating', !reducedMotion.matches);
+        profileRole.classList.toggle('is-suspended', document.hidden);
+      }
+      reducedMotion.addEventListener('change', syncRoleRotation);
+      document.addEventListener('visibilitychange', syncRoleRotation);
+      syncRoleRotation();
+
       const newsList = document.querySelector('.compact-news');
       const newsToggle = document.getElementById('newsToggle');
       if (newsList.querySelectorAll('.news-item').length > 5) newsToggle.classList.add('visible');
