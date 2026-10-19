@@ -316,7 +316,7 @@
 
       let lang = 'en';
       try {
-        const savedLang = localStorage.getItem('lang');
+        const savedLang = localStorage.getItem('homepage-lang');
         if (savedLang === 'en' || savedLang === 'cn') lang = savedLang;
       } catch (e) { /* private mode */ }
       const i18nEls = Array.from(document.querySelectorAll('[data-i18n]'));
@@ -378,9 +378,9 @@
       window.addEventListener('scroll', function () { backToTop.classList.toggle('visible', window.scrollY > 300); }, { passive: true });
       backToTop.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
 
-      function applyLang(next) {
+      function applyLang(next, persist) {
         lang = next;
-        try { localStorage.setItem('lang', lang); } catch (e) { /* private mode */ }
+        if (persist) { try { localStorage.setItem('homepage-lang', lang); } catch (e) { /* private mode */ } }
         document.documentElement.lang = lang === 'cn' ? 'zh-CN' : 'en';
         i18nEls.forEach(function (el) {
           const cn = I18N.cn[el.dataset.i18n];
@@ -395,9 +395,9 @@
         backToTop.title = STRINGS[lang].backToTop;
         backToTop.setAttribute('aria-label', STRINGS[lang].backToTop);
       }
-      langEn.addEventListener('click', function () { applyLang('en'); });
-      langCn.addEventListener('click', function () { applyLang('cn'); });
-      applyLang(lang);
+      langEn.addEventListener('click', function () { applyLang('en', true); });
+      langCn.addEventListener('click', function () { applyLang('cn', true); });
+      applyLang(lang, false);
     })();
   </script>
   <script>
