@@ -15,46 +15,50 @@
       <td>
         <section class="profile-card" aria-labelledby="profile-name">
           <header class="profile-header">
-            <p class="profile-kicker">About me</p>
+            <div class="lang-switch" role="group" aria-label="Language / 语言">
+              <button class="lang-btn" id="langEn" type="button" aria-pressed="false">EN</button>
+              <button class="lang-btn" id="langCn" type="button" aria-pressed="true">CN</button>
+            </div>
+            <p class="profile-kicker" data-i18n="kicker">About me</p>
             <h1 id="profile-name">
               <span>Wenzheng Jiang</span>
               <span class="profile-name-cn" lang="zh-CN">江文钲</span>
             </h1>
             <div class="profile-role">
-              <span class="profile-role-summary">Research interests: Reliable &amp; Trustworthy AI; LLM &amp; Agent.</span>
+              <span class="profile-role-summary" data-i18n="role.summary">Research interests: Reliable &amp; Trustworthy AI; LLM &amp; Agent.</span>
               <span class="profile-role-labels" aria-hidden="true">
-                <span>Reliable &amp; Trustworthy AI</span>
-                <span>LLM &amp; Agent</span>
+                <span data-i18n="role.label1">Reliable &amp; Trustworthy AI</span>
+                <span data-i18n="role.label2">LLM &amp; Agent</span>
               </span>
             </div>
           </header>
           <div class="profile-copy">
-              <p>
-                <span aria-hidden="true">🎓</span> I am a Ph.D. student in the
-                <a href="https://baike.baidu.com/item/%E5%B9%B6%E8%A1%8C%E4%B8%8E%E5%88%86%E5%B8%83%E5%A4%84%E7%90%86%E5%9B%BD%E5%AE%B6%E9%87%8D%E7%82%B9%E5%AE%9E%E9%AA%8C%E5%AE%A4/3455087" target="_blank" rel="noreferrer">National Key Laboratory of Parallel and Distributed Processing</a>
-                within the College of Computer Science and Technology at
-                <a href="https://english.nudt.edu.cn/" target="_blank" rel="noreferrer">National University of Defense Technology</a>,
-                advised by <a href="https://casad.cas.cn/ysxx2022/ysmd/xxjs/201911/t20191121_4724699.html" target="_blank" rel="noreferrer">Prof. Huaimin Wang</a>
-                and <a href="https://ieeexplore.ieee.org/author/37085894197" target="_blank" rel="noreferrer">Prof. Dawei Feng</a>.
-                I am also affiliated with the State Key Laboratory of Complex &amp; Critical Software Environment.
-              </p>
-              <p>
-                <span aria-hidden="true">📚</span> Before beginning my Ph.D., I received my M.S. degree from <a href="https://english.nudt.edu.cn/" target="_blank" rel="noreferrer">National University of Defense Technology</a> in December 2025 (early graduation) under the supervision of
-                <a href="https://scholar.google.com/citations?user=vi-NaH0AAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noreferrer">Prof. Ji Wang</a>
-                and <a href="https://scholar.google.com/citations?user=pxFgkBAAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noreferrer">Prof. Xiaomin Zhu</a> at the <a href="https://d2.nudt.edu.cn/" target="_blank" rel="noreferrer">National Key Laboratory of Big Data and Decision</a>,
-                after earning my B.Eng. degree in Automation from <a href="https://en.csu.edu.cn/" target="_blank" rel="noreferrer">Central South University</a> in June 2023.
-              </p>
-              <p>
-                <span aria-hidden="true">🔬</span> My research focuses on reliable and trustworthy AI, with particular interests in large language models, multimodal learning and autonomous agents. I also study robust and adaptive federated learning.
-              </p>
+            <p data-i18n="bio.p1">
+              <span aria-hidden="true">🎓</span> I am a Ph.D. student in the
+              <a href="https://baike.baidu.com/item/%E5%B9%B6%E8%A1%8C%E4%B8%8E%E5%88%86%E5%B8%83%E5%A4%84%E7%90%86%E5%9B%BD%E5%AE%B6%E9%87%8D%E7%82%B9%E5%AE%9E%E9%AA%8C%E5%AE%A4/3455087" target="_blank" rel="noreferrer">National Key Laboratory of Parallel and Distributed Processing</a>
+              within the College of Computer Science and Technology at
+              <a href="https://english.nudt.edu.cn/" target="_blank" rel="noreferrer">National University of Defense Technology</a>,
+              advised by <a href="https://casad.cas.cn/ysxx2022/ysmd/xxjs/201911/t20191121_4724699.html" target="_blank" rel="noreferrer">Prof. Huaimin Wang</a>
+              and <a href="https://ieeexplore.ieee.org/author/37085894197" target="_blank" rel="noreferrer">Prof. Dawei Feng</a>.
+              I am also affiliated with the State Key Laboratory of Complex &amp; Critical Software Environment.
+            </p>
+            <p data-i18n="bio.p2">
+              <span aria-hidden="true">📚</span> Before beginning my Ph.D., I received my M.S. degree from <a href="https://english.nudt.edu.cn/" target="_blank" rel="noreferrer">National University of Defense Technology</a> in December 2025 (early graduation) under the supervision of
+              <a href="https://scholar.google.com/citations?user=vi-NaH0AAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noreferrer">Prof. Ji Wang</a>
+              and <a href="https://scholar.google.com/citations?user=pxFgkBAAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noreferrer">Prof. Xiaomin Zhu</a> at the <a href="https://d2.nudt.edu.cn/" target="_blank" rel="noreferrer">National Key Laboratory of Big Data and Decision</a>,
+              after earning my B.Eng. degree in Automation from <a href="https://en.csu.edu.cn/" target="_blank" rel="noreferrer">Central South University</a> in June 2023.
+            </p>
+            <p data-i18n="bio.p3">
+              <span aria-hidden="true">🔬</span> My research focuses on reliable and trustworthy AI, with particular interests in large language models, multimodal learning and autonomous agents. I also study robust and adaptive federated learning.
+            </p>
           </div>
           <aside class="profile-sidebar" aria-label="Portrait and contact links">
           <figure class="profile-photo">
             <img src="images/profile-photo-bridge-fixed-v2.png" alt="Portrait of Wenzheng Jiang">
-            <figcaption><span class="profile-photo-title">Ph.D. Student</span><span>Computer Science &amp; Technology</span></figcaption>
+            <figcaption><span class="profile-photo-title" data-i18n="photo.title">Ph.D. Student</span><span data-i18n="photo.sub">Computer Science &amp; Technology</span></figcaption>
           </figure>
           <nav class="profile-contacts contact-links" aria-label="Contact and academic profiles">
-            <a href="mailto:jiangwenzheng@nudt.edu.cn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 6 9 7 9-7"></path></svg>Email</a>
+            <a href="mailto:jiangwenzheng@nudt.edu.cn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 6 9 7 9-7"></path></svg><span data-i18n="contact.email">Email</span></a>
             <a href="https://scholar.google.com/citations?user=YlR0fPwAAAAJ&amp;hl=en" target="_blank" rel="noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 9 10-5 10 5-10 5-10-5Z"></path><path d="M6 11v6c4 3 8 3 12 0v-6M22 9v7"></path></svg>Google Scholar</a>
             <a href="https://github.com/WinzhengKong" target="_blank" rel="noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .75a11.25 11.25 0 0 0-3.558 21.923c.563.104.769-.244.769-.542 0-.267-.01-.974-.015-1.912-3.13.68-3.791-1.509-3.791-1.509-.512-1.3-1.25-1.646-1.25-1.646-1.023-.7.077-.686.077-.686 1.13.08 1.724 1.16 1.724 1.16 1.006 1.723 2.64 1.225 3.282.936.102-.728.393-1.225.715-1.507-2.5-.285-5.13-1.25-5.13-5.561 0-1.228.44-2.233 1.16-3.02-.116-.285-.503-1.43.11-2.98 0 0 .945-.302 3.094 1.154A10.77 10.77 0 0 1 12 6.183c.956.005 1.918.129 2.818.378 2.148-1.456 3.091-1.154 3.091-1.154.614 1.55.228 2.695.112 2.98.722.787 1.159 1.792 1.159 3.02 0 4.322-2.633 5.273-5.142 5.552.404.348.764 1.034.764 2.084 0 1.505-.014 2.719-.014 3.088 0 .3.203.65.774.54A11.252 11.252 0 0 0 12 .75Z"></path></svg>GitHub</a>
           </nav>
@@ -62,29 +66,29 @@
         </section>
 
         <section id="news" class="page-section content-section">
-          <heading><span aria-hidden="true">📰</span> News</heading>
+          <heading data-i18n="heading.news"><span aria-hidden="true">📰</span> News</heading>
           <ul class="news-list compact-news" id="newsList">
-            <li class="news-item"><span class="news-date-badge">Aug. 2026</span><span class="news-text"><a href="https://arxiv.org/abs/2608.21100" target="_blank" rel="noreferrer"><strong>ReFrame</strong></a> was accepted to <strong>Findings of EMNLP 2026</strong>.</span></li>
-            <li class="news-item"><span class="news-date-badge">Jun. 2026</span><span class="news-text">A comprehensive <a href="https://openreview.net/forum?id=Mm1FmsJWD4" target="_blank" rel="noreferrer"><strong>survey of federated learning</strong></a> in open environments was released.</span></li>
-            <li class="news-item"><span class="news-date-badge">May 2026</span><span class="news-text">Received the <strong>ICML 2026 Gold Reviewer Award</strong>.</span></li>
-            <li class="news-item"><span class="news-date-badge">Mar. 2026</span><span class="news-text">I began pursuing a Ph.D. in Computer Science and Technology at NUDT.</span></li>
+            <li class="news-item"><span class="news-date-badge" data-i18n="news1.date">Aug. 2026</span><span class="news-text" data-i18n="news1.text"><a href="https://arxiv.org/abs/2608.21100" target="_blank" rel="noreferrer"><strong>ReFrame</strong></a> was accepted to <strong>Findings of EMNLP 2026</strong>.</span></li>
+            <li class="news-item"><span class="news-date-badge" data-i18n="news2.date">Jun. 2026</span><span class="news-text" data-i18n="news2.text">A comprehensive <a href="https://openreview.net/forum?id=Mm1FmsJWD4" target="_blank" rel="noreferrer"><strong>survey of federated learning</strong></a> in open environments was released.</span></li>
+            <li class="news-item"><span class="news-date-badge" data-i18n="news3.date">May 2026</span><span class="news-text" data-i18n="news3.text">Received the <strong>ICML 2026 Gold Reviewer Award</strong>.</span></li>
+            <li class="news-item"><span class="news-date-badge" data-i18n="news4.date">Mar. 2026</span><span class="news-text" data-i18n="news4.text">I began pursuing a Ph.D. in Computer Science and Technology at NUDT.</span></li>
             <!-- <li class="news-item"><span class="news-date-badge">Jan. 2026</span><span class="news-text"><strong>AutoEP</strong> was accepted for an <strong>Oral Presentation</strong> at ICLR 2026.</span></li> -->
-            <li class="news-item"><span class="news-date-badge">Jan. 2026</span><span class="news-text"><a href="https://doi.org/10.1145/3774904.3792117" target="_blank" rel="noreferrer"><strong>FKGE security</strong></a> was accepted to <strong>WWW 2026</strong> as an <strong>Oral Presentation</strong>.</span></li>
-            <li class="news-item"><span class="news-date-badge">Dec. 2025</span><span class="news-text">I received my M.S. degree in Artificial Intelligence from NUDT (early graduation).</span></li>
-            <li class="news-item"><span class="news-date-badge">Nov. 2025</span><span class="news-text"><a href="https://ojs.aaai.org/index.php/AAAI/article/view/40867" target="_blank" rel="noreferrer"><strong>PurMM</strong></a> and <a href="https://ojs.aaai.org/index.php/AAAI/article/view/40891" target="_blank" rel="noreferrer"><strong>ToT</strong></a> were accepted to <strong>AAAI 2026</strong>, with <a href="https://ojs.aaai.org/index.php/AAAI/article/view/40867" target="_blank" rel="noreferrer"><strong>PurMM</strong></a> selected for an <strong>Oral Presentation</strong>.</span></li>
-            <li class="news-item"><span class="news-date-badge">Sep. 2025</span><span class="news-text"><a href="https://papers.neurips.cc/paper_files/paper/2025/hash/481c70828a4ff20d31a646cc6cc95f3d-Abstract-Conference.html" target="_blank" rel="noreferrer"><strong>Gains</strong></a> was accepted to <strong>NeurIPS 2025</strong>.</span></li>
+            <li class="news-item"><span class="news-date-badge" data-i18n="news6.date">Jan. 2026</span><span class="news-text" data-i18n="news6.text"><a href="https://doi.org/10.1145/3774904.3792117" target="_blank" rel="noreferrer"><strong>FKGE security</strong></a> was accepted to <strong>WWW 2026</strong> as an <strong>Oral Presentation</strong>.</span></li>
+            <li class="news-item"><span class="news-date-badge" data-i18n="news7.date">Dec. 2025</span><span class="news-text" data-i18n="news7.text">I received my M.S. degree in Artificial Intelligence from NUDT (early graduation).</span></li>
+            <li class="news-item"><span class="news-date-badge" data-i18n="news8.date">Nov. 2025</span><span class="news-text" data-i18n="news8.text"><a href="https://ojs.aaai.org/index.php/AAAI/article/view/40867" target="_blank" rel="noreferrer"><strong>PurMM</strong></a> and <a href="https://ojs.aaai.org/index.php/AAAI/article/view/40891" target="_blank" rel="noreferrer"><strong>ToT</strong></a> were accepted to <strong>AAAI 2026</strong>, with <a href="https://ojs.aaai.org/index.php/AAAI/article/view/40867" target="_blank" rel="noreferrer"><strong>PurMM</strong></a> selected for an <strong>Oral Presentation</strong>.</span></li>
+            <li class="news-item"><span class="news-date-badge" data-i18n="news9.date">Sep. 2025</span><span class="news-text" data-i18n="news9.text"><a href="https://papers.neurips.cc/paper_files/paper/2025/hash/481c70828a4ff20d31a646cc6cc95f3d-Abstract-Conference.html" target="_blank" rel="noreferrer"><strong>Gains</strong></a> was accepted to <strong>NeurIPS 2025</strong>.</span></li>
           </ul>
           <button class="news-toggle" id="newsToggle" type="button" aria-controls="newsList" aria-expanded="false">More &darr;</button>
         </section>
 
         <section id="publications" class="page-section content-section">
-          <heading>Publications</heading>
-          <p><sup>†</sup> Equal contribution. <sup>*</sup> Corresponding author.</p>
+          <heading data-i18n="heading.pub">Publications</heading>
+          <p data-i18n="pub.legend"><sup>†</sup> Equal contribution. <sup>*</sup> Corresponding author.</p>
           <div class="tag-filter" id="tagFilter">
-            <button class="tag-btn active" type="button" data-tag="all">All</button>
-            <button class="tag-btn" type="button" data-tag="llm-agent">LLM&amp;Agent</button>
-            <button class="tag-btn" type="button" data-tag="federated">FL</button>
-            <button class="tag-btn" type="button" data-tag="ai-safety">AI Safety</button>
+            <button class="tag-btn active" type="button" data-tag="all"><span data-i18n="tag.all">All</span></button>
+            <button class="tag-btn" type="button" data-tag="llm-agent"><span data-i18n="tag.llm">LLM&amp;Agent</span></button>
+            <button class="tag-btn" type="button" data-tag="federated"><span data-i18n="tag.fl">FL</span></button>
+            <button class="tag-btn" type="button" data-tag="ai-safety"><span data-i18n="tag.safety">AI Safety</span></button>
           </div>
 
           <table class="publications-table" id="publicationTable" style="width:100%;border:0;border-spacing:0 22px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
@@ -94,9 +98,9 @@
                 <a href="https://doi.org/10.1145/3774904.3792117" target="_blank" rel="noreferrer"><papertitle>Unveiling and Mitigating Untargeted Poisoning Attacks on Federated Knowledge Graph Embedding</papertitle></a><br>
                 <strong>Wenzheng Jiang</strong>, Ke Liang<sup>*</sup>, Wenke Huang, Xiongtao Zhang, Zhenxing Xu, Guancheng Wan, Cheston Tan, Flint Xiaofeng Fan, Ji Wang<sup>*</sup><br>
                 <span class="oral"><em><strong>WWW 2026 (Oral)</strong></em></span><br>
-                <a href="https://doi.org/10.1145/3774904.3792117" target="_blank" rel="noreferrer">Paper</a> /
-                <a href="https://github.com/WinzhengKong/FKGE-Security" target="_blank" rel="noreferrer">Code</a>
-                <p>A systematic attack-and-defense study of untargeted poisoning in federated knowledge graph embedding.</p>
+                <a href="https://doi.org/10.1145/3774904.3792117" target="_blank" rel="noreferrer"><span data-i18n="link.paper">Paper</span></a> /
+                <a href="https://github.com/WinzhengKong/FKGE-Security" target="_blank" rel="noreferrer"><span data-i18n="link.code">Code</span></a>
+                <p data-i18n="pub1.desc">A systematic attack-and-defense study of untargeted poisoning in federated knowledge graph embedding.</p>
               </td>
             </tr>
             <tr class="publication-row featured-paper" data-tags="llm-agent,ai-safety">
@@ -105,9 +109,9 @@
                 <a href="https://ojs.aaai.org/index.php/AAAI/article/view/40867" target="_blank" rel="noreferrer"><papertitle>PurMM: Attention-Guided Test-Time Backdoor Purification in Multimodal Large Language Models</papertitle></a><br>
                 <strong>Wenzheng Jiang<sup>†</sup></strong>, Ke Liang<sup>†</sup>, Xuankun Rong<sup>†</sup>, Jingxuan Zhou, Zhengyi Zhong, Guancheng Wan, Ji Wang<sup>*</sup><br>
                 <span class="oral"><em><strong>AAAI 2026 (Oral)</strong></em></span><br>
-                <a href="https://ojs.aaai.org/index.php/AAAI/article/view/40867" target="_blank" rel="noreferrer">Paper</a> /
-                <a href="https://github.com/WinzhengKong/PurMM" target="_blank" rel="noreferrer">Code</a>
-                <p>An attention-guided test-time defense that purifies suspicious visual tokens without retraining.</p>
+                <a href="https://ojs.aaai.org/index.php/AAAI/article/view/40867" target="_blank" rel="noreferrer"><span data-i18n="link.paper">Paper</span></a> /
+                <a href="https://github.com/WinzhengKong/PurMM" target="_blank" rel="noreferrer"><span data-i18n="link.code">Code</span></a>
+                <p data-i18n="pub2.desc">An attention-guided test-time defense that purifies suspicious visual tokens without retraining.</p>
               </td>
             </tr>
             <tr class="publication-row featured-paper" data-tags="llm-agent,ai-safety">
@@ -116,18 +120,18 @@
                 <a href="https://arxiv.org/abs/2608.21100" target="_blank" rel="noreferrer"><papertitle>ReFrame: Evidence-Guided Test-Time Safety Alignment in Multimodal Large Language Models</papertitle></a><br>
                 <strong>Wenzheng Jiang</strong>, Xuankun Rong, Yuanzhao Zhai, Dawei Feng<sup>*</sup>, Huaimin Wang<br>
                 <em><strong>EMNLP 2026 Findings</strong></em><br>
-                <a href="https://arxiv.org/abs/2608.21100" target="_blank" rel="noreferrer">Paper</a>
-                <p>A training-free input-reframing framework for multimodal safety alignment at inference time.</p>
+                <a href="https://arxiv.org/abs/2608.21100" target="_blank" rel="noreferrer"><span data-i18n="link.paper">Paper</span></a>
+                <p data-i18n="pub3.desc">A training-free input-reframing framework for multimodal safety alignment at inference time.</p>
               </td>
             </tr>
             <tr class="publication-row" data-tags="federated">
               <td class="paper-image-cell"><a class="paper-figure-link" href="images/papers/federated-model-evolution-survey-framework.svg" target="_blank" rel="noreferrer" title="Open the full federated model evolution framework figure"><img class="paper-figure" src="images/papers/federated-model-evolution-survey-framework.svg" alt="Interdependencies among federated model evolution problems"></a></td>
               <td class="paper-info-cell">
-                <a href="https://openreview.net/forum?id=Mm1FmsJWD4&amp;referrer=%5Bthe%20profile%20of%20Wenzheng%20Jiang%5D%28%2Fprofile%3Fid%3D~Wenzheng_Jiang1%29" target="_blank" rel="noreferrer"><papertitle>Federated Model Evolution in Open Environments: A Comprehensive Survey of Domain Adaptation, Continual Learning, and Unlearning</papertitle></a><br>
+                <a href="https://openreview.net/forum?id=Mm1FmsJWD4" target="_blank" rel="noreferrer"><papertitle>Federated Model Evolution in Open Environments: A Comprehensive Survey of Domain Adaptation, Continual Learning, and Unlearning</papertitle></a><br>
                 Ji Wang<sup>*†</sup>, Zhengyi Zhong<sup>†</sup>, Jingxuan Zhou, Jiahui Ling, Jingyi Leng, <strong>Wenzheng Jiang</strong>, Weidong Bao, Hao Peng, Xiang Zhao, Yongxin Tong, Ling Liu<br>
-                <a href="https://openreview.net/forum?id=Mm1FmsJWD4&amp;referrer=%5Bthe%20profile%20of%20Wenzheng%20Jiang%5D%28%2Fprofile%3Fid%3D~Wenzheng_Jiang1%29" target="_blank" rel="noreferrer">Paper</a> /
-                <a href="papers/Federated-Model-Evolution-in-Open-Environments-A-Comprehensive-Survey-of-Domain-Adaptation-Continual-Learning-and-Unlearning.pdf" target="_blank" rel="noreferrer">Latest PDF</a>
-                <p>A comprehensive survey of federated domain adaptation, continual learning, and unlearning for model evolution in open environments.</p>
+                <a href="https://openreview.net/forum?id=Mm1FmsJWD4" target="_blank" rel="noreferrer"><span data-i18n="link.paper">Paper</span></a> /
+                <a href="papers/Federated-Model-Evolution-in-Open-Environments-A-Comprehensive-Survey-of-Domain-Adaptation-Continual-Learning-and-Unlearning.pdf" target="_blank" rel="noreferrer"><span data-i18n="link.pdf">Latest PDF</span></a>
+                <p data-i18n="pub4.desc">A comprehensive survey of federated domain adaptation, continual learning, and unlearning for model evolution in open environments.</p>
               </td>
             </tr>
             <tr class="publication-row" data-tags="llm-agent">
@@ -136,9 +140,9 @@
                 <a href="https://openreview.net/forum?id=hit3hGBheP" target="_blank" rel="noreferrer"><papertitle>AutoEP: LLMs-Driven Automation of Hyperparameter Evolution for Metaheuristic Algorithms</papertitle></a><br>
                 Zhenxing Xu<sup>†</sup>, Yizhe Zhang<sup>†</sup>, Weidong Bao, Hao Wang, Ming Chen, Haoran Ye, <strong>Wenzheng Jiang</strong>, Hui Yan, Ji Wang<sup>*</sup><br>
                 <span class="oral"><em><strong>ICLR 2026 (Oral)</strong></em></span><br>
-                <a href="https://openreview.net/forum?id=hit3hGBheP" target="_blank" rel="noreferrer">Paper</a> /
-                <a href="https://github.com/YiZheZhang12/AutoEP" target="_blank" rel="noreferrer">Code</a>
-                <p>Online landscape analysis and multi-LLM reasoning automate hyperparameter control.</p>
+                <a href="https://openreview.net/forum?id=hit3hGBheP" target="_blank" rel="noreferrer"><span data-i18n="link.paper">Paper</span></a> /
+                <a href="https://github.com/YiZheZhang12/AutoEP" target="_blank" rel="noreferrer"><span data-i18n="link.code">Code</span></a>
+                <p data-i18n="pub5.desc">Online landscape analysis and multi-LLM reasoning automate hyperparameter control.</p>
               </td>
             </tr>
             <tr class="publication-row" data-tags="llm-agent,ai-safety">
@@ -147,8 +151,8 @@
                 <a href="https://ojs.aaai.org/index.php/AAAI/article/view/40891" target="_blank" rel="noreferrer"><papertitle>ToT: Probing Semantic Insensitivity for Inference-Time Backdoor Defense in Multimodal Large Language Model</papertitle></a><br>
                 Xuankun Rong, Wenke Huang, <strong>Wenzheng Jiang</strong>, Yiming Li, Wenxuan Wang, Mang Ye<sup>*</sup><br>
                 <em><strong>AAAI 2026</strong></em><br>
-                <a href="https://ojs.aaai.org/index.php/AAAI/article/view/40891" target="_blank" rel="noreferrer">Paper</a>
-                <p>A black-box inference-time defense based on semantic perturbations and confidence drift.</p>
+                <a href="https://ojs.aaai.org/index.php/AAAI/article/view/40891" target="_blank" rel="noreferrer"><span data-i18n="link.paper">Paper</span></a>
+                <p data-i18n="pub6.desc">A black-box inference-time defense based on semantic perturbations and confidence drift.</p>
               </td>
             </tr>
             <tr class="publication-row" data-tags="federated">
@@ -157,9 +161,9 @@
                 <a href="https://papers.neurips.cc/paper_files/paper/2025/hash/481c70828a4ff20d31a646cc6cc95f3d-Abstract-Conference.html" target="_blank" rel="noreferrer"><papertitle>Gains: Fine-grained Federated Domain Adaptation in Open Set</papertitle></a><br>
                 Zhengyi Zhong<sup>†</sup>, <strong>Wenzheng Jiang<sup>†</sup></strong>, Weidong Bao, Ji Wang<sup>*</sup>, Cheems Wang, Guanbo Wang, Yongheng Deng, Ju Ren<br>
                 <em><strong>NeurIPS 2025</strong></em><br>
-                <a href="https://papers.neurips.cc/paper_files/paper/2025/hash/481c70828a4ff20d31a646cc6cc95f3d-Abstract-Conference.html" target="_blank" rel="noreferrer">Paper</a> /
-                <a href="https://github.com/Zhong-Zhengyi/Gains" target="_blank" rel="noreferrer">Code</a>
-                <p>Fine-grained discovery and rapid adaptation of new knowledge in open-set federated learning.</p>
+                <a href="https://papers.neurips.cc/paper_files/paper/2025/hash/481c70828a4ff20d31a646cc6cc95f3d-Abstract-Conference.html" target="_blank" rel="noreferrer"><span data-i18n="link.paper">Paper</span></a> /
+                <a href="https://github.com/Zhong-Zhengyi/Gains" target="_blank" rel="noreferrer"><span data-i18n="link.code">Code</span></a>
+                <p data-i18n="pub7.desc">Fine-grained discovery and rapid adaptation of new knowledge in open-set federated learning.</p>
               </td>
             </tr>
             <tr class="publication-row" data-tags="federated">
@@ -168,9 +172,9 @@
                 <a href="https://arxiv.org/abs/2502.00870" target="_blank" rel="noreferrer"><papertitle>FedHPD: Heterogeneous Federated Reinforcement Learning via Policy Distillation</papertitle></a><br>
                 <strong>Wenzheng Jiang</strong>, Ji Wang, Xiongtao Zhang, Weidong Bao, Cheston Tan, Flint Xiaofeng Fan<br>
                 <em><strong>AAMAS 2025</strong></em><br>
-                <a href="https://arxiv.org/abs/2502.00870" target="_blank" rel="noreferrer">Paper</a> /
-                <a href="https://github.com/WinzhengKong/FedHPD" target="_blank" rel="noreferrer">Code</a>
-                <p>Policy distillation enables knowledge sharing among heterogeneous agents in federated reinforcement learning.</p>
+                <a href="https://arxiv.org/abs/2502.00870" target="_blank" rel="noreferrer"><span data-i18n="link.paper">Paper</span></a> /
+                <a href="https://github.com/WinzhengKong/FedHPD" target="_blank" rel="noreferrer"><span data-i18n="link.code">Code</span></a>
+                <p data-i18n="pub8.desc">Policy distillation enables knowledge sharing among heterogeneous agents in federated reinforcement learning.</p>
               </td>
             </tr>
           </tbody></table>
@@ -178,29 +182,29 @@
         </section>
 
         <section id="education" class="page-section content-section">
-          <heading>Education</heading>
+          <heading data-i18n="heading.edu">Education</heading>
           <table class="education-table" style="width:100%;border:0;border-spacing:0;border-collapse:separate;"><tbody>
-            <tr><td class="degree-cell"><div class="degree-with-logo"><i class="education-logo nudt-logo" role="img" aria-label="National University of Defense Technology logo"></i><span>Ph.D.</span></div></td><td><strong>National University of Defense Technology</strong><br>College of Computer Science and Technology<br>State Key Laboratory of Complex &amp; Critical Software Environment<br>Advisors: <a href="https://casad.cas.cn/ysxx2022/ysmd/xxjs/201911/t20191121_4724699.html" target="_blank" rel="noreferrer">Prof. Huaimin Wang</a> and <a href="https://ieeexplore.ieee.org/author/37085894197" target="_blank" rel="noreferrer">Prof. Dawei Feng</a></td><td class="date-cell">Mar. 2026 - Present</td></tr>
-            <tr><td class="degree-cell"><div class="degree-with-logo"><i class="education-logo nudt-logo" role="img" aria-label="National University of Defense Technology logo"></i><span>M.S.</span></div></td><td><strong>National University of Defense Technology</strong><br>National Key Laboratory of Big Data and Decision<br>Advisors: <a href="https://scholar.google.com/citations?user=vi-NaH0AAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noreferrer">Prof. Ji Wang</a> and <a href="https://scholar.google.com/citations?user=pxFgkBAAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noreferrer">Prof. Xiaomin Zhu</a></td><td class="date-cell">Sep. 2023 - Dec. 2025<br><strong>Early graduation</strong></td></tr>
-            <tr><td class="degree-cell"><div class="degree-with-logo"><img class="education-logo" src="images/education/csu.png" alt="Central South University logo" width="64" height="64"><span>B.Eng.</span></div></td><td><strong>Central South University</strong><br>School of Automation</td><td class="date-cell">Sep. 2019 - Jun. 2023</td></tr>
+            <tr><td class="degree-cell"><div class="degree-with-logo"><i class="education-logo nudt-logo" role="img" aria-label="National University of Defense Technology logo"></i><span data-i18n="edu1.degree">Ph.D.</span></div></td><td data-i18n="edu1.td"><strong>National University of Defense Technology</strong><br>College of Computer Science and Technology<br>State Key Laboratory of Complex &amp; Critical Software Environment<br>Advisors: <a href="https://casad.cas.cn/ysxx2022/ysmd/xxts/201911/t20191121_4724699.html" target="_blank" rel="noreferrer">Prof. Huaimin Wang</a> and <a href="https://ieeexplore.ieee.org/author/37085894197" target="_blank" rel="noreferrer">Prof. Dawei Feng</a></td><td class="date-cell" data-i18n="edu1.date">Mar. 2026 - Present</td></tr>
+            <tr><td class="degree-cell"><div class="degree-with-logo"><i class="education-logo nudt-logo" role="img" aria-label="National University of Defense Technology logo"></i><span data-i18n="edu2.degree">M.S.</span></div></td><td data-i18n="edu2.td"><strong>National University of Defense Technology</strong><br>National Key Laboratory of Big Data and Decision<br>Advisors: <a href="https://scholar.google.com/citations?user=vi-NaH0AAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noreferrer">Prof. Ji Wang</a> and <a href="https://scholar.google.com/citations?user=pxFgkBAAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noreferrer">Prof. Xiaomin Zhu</a></td><td class="date-cell" data-i18n="edu2.date">Sep. 2023 - Dec. 2025<br><strong>Early graduation</strong></td></tr>
+            <tr><td class="degree-cell"><div class="degree-with-logo"><img class="education-logo" src="images/education/csu.png" alt="Central South University logo" width="64" height="64"><span data-i18n="edu3.degree">B.Eng.</span></div></td><td data-i18n="edu3.td"><strong>Central South University</strong><br>School of Automation</td><td class="date-cell" data-i18n="edu3.date">Sep. 2019 - Jun. 2023</td></tr>
           </tbody></table>
         </section>
 
         <section id="service" class="page-section content-section">
-          <heading>Academic Service</heading>
+          <heading data-i18n="heading.service">Academic Service</heading>
           <ul class="review-list service-list">
-            <li><strong>Conferences:</strong> AAAI (2026, 2027) · NeurIPS 2026 · AAMAS 2027 · ICML 2026 · WWW 2026</li>
-            <li><strong>Journals:</strong> IEEE TDSC · IEEE TKDE · IEEE TNNLS · IEEE TCYB · TMLR</li>
+            <li data-i18n="service.conf"><strong>Conferences:</strong> AAAI (2026, 2027) · NeurIPS 2026 · AAMAS 2027 · ICML 2026 · WWW 2026</li>
+            <li data-i18n="service.journal"><strong>Journals:</strong> IEEE TDSC · IEEE TKDE · IEEE TNNLS · IEEE TCYB · TMLR</li>
           </ul>
         </section>
 
         <section id="awards" class="page-section content-section awards-section">
-          <heading>Awards and Honors</heading>
+          <heading data-i18n="heading.awards">Awards and Honors</heading>
           <ul class="award-list">
-            <li><span>China National Scholarship</span><time>Nov. 2025</time></li>
-            <li><span>Outstanding Student, National University of Defense Technology</span><time>Nov. 2025</time></li>
-            <li><span>National Defense Science &amp; Technology Innovation Scholarship</span><time>Jan. 2025</time></li>
-            <li><span>First Prize (Top 1.19%), “HUAWEI Cup” 21st China Post-Graduate Mathematical Contest in Modeling</span><time>Dec. 2024</time></li>
+            <li><span data-i18n="award1">China National Scholarship</span><time data-i18n="award1.date">Nov. 2025</time></li>
+            <li><span data-i18n="award2">Outstanding Student, National University of Defense Technology</span><time data-i18n="award2.date">Nov. 2025</time></li>
+            <li><span data-i18n="award3">National Defense Science &amp; Technology Innovation Scholarship</span><time data-i18n="award3.date">Jan. 2025</time></li>
+            <li><span data-i18n="award4">First Prize (Top 1.19%), “HUAWEI Cup” 21st China Post-Graduate Mathematical Contest in Modeling</span><time data-i18n="award4.date">Dec. 2024</time></li>
           </ul>
         </section>
       </td>
@@ -215,10 +219,10 @@
       </picture>
       <div class="mountain-fallback" style="display:none;"></div>
       <div class="mountain-content">
-        <h2>Keep Exploring</h2>
-        <p class="mountain-sub">Surpass predecessors, surpass yourself, surpass rivals.</p>
-        <a href="mailto:jiangwenzheng@nudt.edu.cn" class="mountain-cta"><span>Get in Touch</span></a>
-        <p class="mountain-footnote"><span>Wenzheng Jiang</span><span class="mountain-updated">Last updated: September 2026.</span><span id="busuanzi_container_site_uv" style="display:none;"><span aria-hidden="true">👀</span> Visitors: <span id="busuanzi_value_site_uv"></span></span></p>
+        <h2 data-i18n="footer.h2">Keep Exploring</h2>
+        <p class="mountain-sub" data-i18n="footer.sub">Surpass predecessors, surpass yourself, surpass rivals.</p>
+        <a href="mailto:jiangwenzheng@nudt.edu.cn" class="mountain-cta"><span data-i18n="footer.cta">Get in Touch</span></a>
+        <p class="mountain-footnote"><span>Wenzheng Jiang</span><span class="mountain-updated" data-i18n="footer.updated">Last updated: September 2026.</span><span id="busuanzi_container_site_uv" style="display:none;"><span aria-hidden="true">👀</span> <span data-i18n="footer.visitors">Visitors:</span> <span id="busuanzi_value_site_uv"></span></span></p>
       </div>
     </div>
   </section>
@@ -230,6 +234,96 @@
   </button>
   <script>
     (function () {
+      const STRINGS = {
+        en: { more: 'More &darr;', less: 'Less &uarr;', backToTop: 'Back to top' },
+        cn: { more: '更多 &darr;', less: '收起 &uarr;', backToTop: '返回顶部' }
+      };
+      const I18N = {
+        cn: {
+          'kicker': '关于我',
+          'role.summary': '研究方向:可靠可信人工智能;大模型与智能体。',
+          'role.label1': '可靠可信人工智能',
+          'role.label2': '大模型与智能体',
+          'bio.p1': '<span aria-hidden="true">🎓</span> 我是<a href="https://english.nudt.edu.cn/" target="_blank" rel="noreferrer">国防科技大学</a>计算机学院<a href="https://baike.baidu.com/item/%E5%B9%B6%E8%A1%8C%E4%B8%8E%E5%88%86%E5%B8%83%E5%A4%84%E7%90%86%E5%9B%BD%E5%AE%B6%E9%87%8D%E7%82%B9%E5%AE%9E%E9%AA%8C%E5%AE%A4/3455087" target="_blank" rel="noreferrer">并行与分布式处理全国重点实验室</a>的博士生,师从 <a href="https://casad.cas.cn/ysxx2022/ysmd/xxjs/201911/t20191121_4724699.html" target="_blank" rel="noreferrer">王怀民教授</a> 与 <a href="https://ieeexplore.ieee.org/author/37085894197" target="_blank" rel="noreferrer">冯大为研究员</a>,同时隶属于复杂关键软件环境全国重点实验室。',
+          'bio.p2': '<span aria-hidden="true">📚</span> 在攻读博士之前,我于 2025 年 12 月从<a href="https://english.nudt.edu.cn/" target="_blank" rel="noreferrer">国防科技大学</a>提前毕业并获得硕士学位,师从<a href="https://d2.nudt.edu.cn/" target="_blank" rel="noreferrer">大数据与决策全国重点实验室</a>的<a href="https://scholar.google.com/citations?user=vi-NaH0AAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noreferrer">王吉教授</a>与<a href="https://scholar.google.com/citations?user=pxFgkBAAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noreferrer">朱晓敏研究员</a>;此前于 2023 年 6 月获得<a href="https://en.csu.edu.cn/" target="_blank" rel="noreferrer">中南大学</a>自动化专业工学学士学位。',
+          'bio.p3': '<span aria-hidden="true">🔬</span> 我的研究聚焦于可靠可信人工智能,尤其关注大语言模型、多模态学习与自主智能体;同时研究鲁棒且自适应的联邦学习。',
+          'photo.title': '博士生',
+          'photo.sub': '计算机科学与技术',
+          'contact.email': '邮箱',
+          'heading.news': '<span aria-hidden="true">📰</span> 新闻',
+          'heading.pub': '论文',
+          'heading.edu': '教育经历',
+          'heading.service': '学术服务',
+          'heading.awards': '获奖与荣誉',
+          'news1.date': '2026年8月',
+          'news1.text': '<a href="https://arxiv.org/abs/2608.21100" target="_blank" rel="noreferrer"><strong>ReFrame</strong></a> 被 <strong>EMNLP 2026 Findings</strong> 接收。',
+          'news2.date': '2026年6月',
+          'news2.text': '发布了一篇开放环境下联邦学习的<a href="https://openreview.net/forum?id=Mm1FmsJWD4" target="_blank" rel="noreferrer"><strong>综合综述</strong></a>。',
+          'news3.date': '2026年5月',
+          'news3.text': '获得 <strong>ICML 2026 金牌审稿人奖</strong>(Gold Reviewer Award)。',
+          'news4.date': '2026年3月',
+          'news4.text': '开始在国防科技大学攻读计算机科学与技术专业博士学位。',
+          'news6.date': '2026年1月',
+          'news6.text': '<a href="https://doi.org/10.1145/3774904.3792117" target="_blank" rel="noreferrer"><strong>FKGE 安全</strong></a> 论文被 <strong>WWW 2026</strong> 接收为<strong>口头报告</strong>。',
+          'news7.date': '2025年12月',
+          'news7.text': '从国防科技大学提前毕业,获人工智能专业硕士学位。',
+          'news8.date': '2025年11月',
+          'news8.text': '<a href="https://ojs.aaai.org/index.php/AAAI/article/view/40867" target="_blank" rel="noreferrer"><strong>PurMM</strong></a> 与 <a href="https://ojs.aaai.org/index.php/AAAI/article/view/40891" target="_blank" rel="noreferrer"><strong>ToT</strong></a> 被 <strong>AAAI 2026</strong> 接收,其中 <a href="https://ojs.aaai.org/index.php/AAAI/article/view/40867" target="_blank" rel="noreferrer"><strong>PurMM</strong></a> 入选<strong>口头报告</strong>。',
+          'news9.date': '2025年9月',
+          'news9.text': '<a href="https://papers.neurips.cc/paper_files/paper/2025/hash/481c70828a4ff20d31a646cc6cc95f3d-Abstract-Conference.html" target="_blank" rel="noreferrer"><strong>Gains</strong></a> 被 <strong>NeurIPS 2025</strong> 接收。',
+          'pub.legend': '<sup>†</sup> 同等贡献。<sup>*</sup> 通讯作者。',
+          'tag.all': '全部',
+          'tag.llm': '大模型与智能体',
+          'tag.fl': '联邦学习',
+          'tag.safety': 'AI 安全',
+          'link.paper': '论文',
+          'link.code': '代码',
+          'link.pdf': '最新 PDF',
+          'pub1.desc': '对联邦知识图谱嵌入中无目标投毒攻击的系统性攻防研究。',
+          'pub2.desc': '一种注意力引导的测试时防御方法,无需重新训练即可净化可疑视觉 token。',
+          'pub3.desc': '一种免训练的输入重构框架,在推理阶段实现多模态安全对齐。',
+          'pub4.desc': '全面梳理开放环境下联邦模型演化的领域自适应、持续学习与遗忘研究。',
+          'pub5.desc': '通过在线景观分析与多 LLM 协同推理实现超参数自动化调控。',
+          'pub6.desc': '一种基于语义扰动与置信度漂移的黑盒推理时防御方法。',
+          'pub7.desc': '面向开集联邦学习的新知识细粒度发现与快速适应。',
+          'pub8.desc': '策略蒸馏实现联邦强化学习中异构智能体间的知识共享。',
+          'edu1.degree': '博士',
+          'edu1.td': '<strong>国防科技大学</strong><br>计算机学院<br>复杂关键软件环境全国重点实验室<br>导师:<a href="https://casad.cas.cn/ysxx2022/ysmd/xxts/201911/t20191121_4724699.html" target="_blank" rel="noreferrer">王怀民教授</a> 与 <a href="https://ieeexplore.ieee.org/author/37085894197" target="_blank" rel="noreferrer">冯大为研究员</a>',
+          'edu1.date': '2026年3月 - 至今',
+          'edu2.degree': '硕士',
+          'edu2.td': '<strong>国防科技大学</strong><br>大数据与决策全国重点实验室<br>导师:<a href="https://scholar.google.com/citations?user=vi-NaH0AAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noreferrer">王吉教授</a> 与 <a href="https://scholar.google.com/citations?user=pxFgkBAAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noreferrer">朱晓敏研究员</a>',
+          'edu2.date': '2023年9月 - 2025年12月<br><strong>提前毕业</strong>',
+          'edu3.degree': '学士',
+          'edu3.td': '<strong>中南大学</strong><br>自动化学院',
+          'edu3.date': '2019年9月 - 2023年6月',
+          'service.conf': '<strong>会议:</strong> AAAI (2026, 2027) · NeurIPS 2026 · AAMAS 2027 · ICML 2026 · WWW 2026',
+          'service.journal': '<strong>期刊:</strong> IEEE TDSC · IEEE TKDE · IEEE TNNLS · IEEE TCYB · TMLR',
+          'award1': '国家奖学金',
+          'award1.date': '2025年11月',
+          'award2': '国防科技大学优秀学生',
+          'award2.date': '2025年11月',
+          'award3': '国防科技创新奖学金',
+          'award3.date': '2025年1月',
+          'award4': '“华为杯”第二十一届中国研究生数学建模竞赛一等奖(前 1.19%)',
+          'award4.date': '2024年12月',
+          'footer.h2': '不断探索',
+          'footer.sub': '超越前辈,超越自己,超越对手。',
+          'footer.cta': '与我联系',
+          'footer.updated': '最后更新:2026年9月。',
+          'footer.visitors': '访客:'
+        }
+      };
+
+      let lang = 'cn';
+      try {
+        const savedLang = localStorage.getItem('lang');
+        if (savedLang === 'en' || savedLang === 'cn') lang = savedLang;
+      } catch (e) { /* private mode */ }
+      const i18nEls = Array.from(document.querySelectorAll('[data-i18n]'));
+      i18nEls.forEach(function (el) { el.dataset.i18nEn = el.innerHTML; });
+      const langEn = document.getElementById('langEn');
+      const langCn = document.getElementById('langCn');
+
       const profileRole = document.querySelector('.profile-role');
       const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
       function syncRoleRotation() {
@@ -246,7 +340,7 @@
       newsToggle.addEventListener('click', function () {
         const expanded = newsList.classList.toggle('expanded');
         newsToggle.setAttribute('aria-expanded', String(expanded));
-        newsToggle.innerHTML = expanded ? 'Less &uarr;' : 'More &darr;';
+        newsToggle.innerHTML = expanded ? STRINGS[lang].less : STRINGS[lang].more;
       });
 
       const rows = Array.from(document.querySelectorAll('.publication-row'));
@@ -261,7 +355,7 @@
         rows.forEach(function (row) { row.style.display = visibleRows.includes(row) ? '' : 'none'; });
         publicationToggle.classList.toggle('visible', matchingRows.length > 2);
         publicationToggle.setAttribute('aria-expanded', String(publicationsExpanded));
-        publicationToggle.innerHTML = publicationsExpanded ? 'Less &uarr;' : 'More &darr;';
+        publicationToggle.innerHTML = publicationsExpanded ? STRINGS[lang].less : STRINGS[lang].more;
       }
       document.querySelectorAll('.tag-btn').forEach(function (button) {
         const tag = button.dataset.tag;
@@ -283,6 +377,27 @@
       const backToTop = document.getElementById('backToTop');
       window.addEventListener('scroll', function () { backToTop.classList.toggle('visible', window.scrollY > 300); }, { passive: true });
       backToTop.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
+      function applyLang(next) {
+        lang = next;
+        try { localStorage.setItem('lang', lang); } catch (e) { /* private mode */ }
+        document.documentElement.lang = lang === 'cn' ? 'zh-CN' : 'en';
+        i18nEls.forEach(function (el) {
+          const cn = I18N.cn[el.dataset.i18n];
+          el.innerHTML = lang === 'cn' && cn ? cn : el.dataset.i18nEn;
+        });
+        langEn.classList.toggle('active', lang === 'en');
+        langCn.classList.toggle('active', lang === 'cn');
+        langEn.setAttribute('aria-pressed', String(lang === 'en'));
+        langCn.setAttribute('aria-pressed', String(lang === 'cn'));
+        newsToggle.innerHTML = newsList.classList.contains('expanded') ? STRINGS[lang].less : STRINGS[lang].more;
+        publicationToggle.innerHTML = publicationsExpanded ? STRINGS[lang].less : STRINGS[lang].more;
+        backToTop.title = STRINGS[lang].backToTop;
+        backToTop.setAttribute('aria-label', STRINGS[lang].backToTop);
+      }
+      langEn.addEventListener('click', function () { applyLang('en'); });
+      langCn.addEventListener('click', function () { applyLang('cn'); });
+      applyLang(lang);
     })();
   </script>
   <script>
