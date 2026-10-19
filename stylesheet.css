@@ -1627,19 +1627,19 @@ body {
   right: 0;
   z-index: 5;
   display: flex;
-  gap: 3px;
-  padding: 3px;
-  border: 1px solid #e9dfcf;
-  border-radius: 999px;
-  background: rgba(255, 254, 250, 0.92);
-  box-shadow: 0 4px 14px rgba(75, 53, 22, 0.1);
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid var(--panel-border);
+  border-radius: 12px;
+  background: #fffefa;
+  box-shadow: var(--panel-shadow);
 }
 
 .lang-btn {
   min-width: 36px;
   padding: 4px 10px;
-  border: 0;
-  border-radius: 999px;
+  border: 1px solid transparent;
+  border-radius: 8px;
   background: transparent;
   color: #8a7a5f;
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
@@ -1648,7 +1648,7 @@ body {
   letter-spacing: 0.08em;
   line-height: 1.5;
   cursor: url('images/icon/cursor-pointer.png'), pointer;
-  transition: color 160ms ease, background 160ms ease;
+  transition: color 160ms ease, background 160ms ease, border-color 160ms ease;
 }
 
 .lang-btn:hover {
@@ -1656,7 +1656,8 @@ body {
 }
 
 .lang-btn.active {
-  background: #b78438;
+  border-color: rgba(17, 17, 17, 0.62);
+  background: #ad7020;
   color: #fff;
 }
 
