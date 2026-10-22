@@ -150,6 +150,15 @@ a {
   line-height: 1.6;
 }
 
+html[lang="zh-CN"] body,
+html[lang="zh-CN"] td,
+html[lang="zh-CN"] th,
+html[lang="zh-CN"] tr,
+html[lang="zh-CN"] p,
+html[lang="zh-CN"] a {
+  font-size: 17px;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -368,7 +377,7 @@ heading {
   text-decoration-color: #fba524;
 }
 .news-text {
-  font-size: 14px;
+  font-size: inherit;
   color: #333;
 }
 
@@ -425,7 +434,7 @@ heading2 {
 
 papertitle {
   font-family: 'Lato', Verdana, Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 700
 }
 
@@ -1557,6 +1566,10 @@ html[lang="zh-CN"] .profile-copy p {
   vertical-align: middle;
 }
 
+.education-table td:not(.date-cell):not(.degree-cell) strong {
+  font-size: 18px;
+}
+
 .degree-cell {
   width: 160px;
   text-align: center;
@@ -1591,7 +1604,7 @@ html[lang="zh-CN"] .profile-copy p {
   background: #ad7020;
   color: #fff;
   font-family: Georgia, serif;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: bold;
 }
 
