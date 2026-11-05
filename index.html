@@ -15,10 +15,12 @@
       <td>
         <section class="profile-card" aria-labelledby="profile-name">
           <header class="profile-header">
+            <!-- Chinese page temporarily disabled: restore this switch together with the commented language code below.
             <div class="lang-switch" role="group" aria-label="Language / 语言">
               <button class="lang-btn" id="langEn" type="button" aria-pressed="true">EN</button>
               <button class="lang-btn" id="langCn" type="button" aria-pressed="false">CN</button>
             </div>
+            -->
             <p class="profile-kicker" data-i18n="kicker">About me</p>
             <h1 id="profile-name">
               <span>Wenzheng Jiang</span>
@@ -239,8 +241,9 @@
     (function () {
       const STRINGS = {
         en: { more: 'More &darr;', less: 'Less &uarr;', backToTop: 'Back to top' },
-        cn: { more: '更多 &darr;', less: '收起 &uarr;', backToTop: '返回顶部' }
+        // cn: { more: '更多 &darr;', less: '收起 &uarr;', backToTop: '返回顶部' }
       };
+      /* Chinese translations temporarily disabled; remove this comment block to restore.
       const I18N = {
         cn: {
           'kicker': '关于我',
@@ -319,16 +322,21 @@
           'footer.visitors': '访客：'
         }
       };
+      */
 
-      let lang = 'en';
-      try {
-        const savedLang = localStorage.getItem('homepage-lang');
-        if (savedLang === 'en' || savedLang === 'cn') lang = savedLang;
-      } catch (e) { /* private mode */ }
-      const i18nEls = Array.from(document.querySelectorAll('[data-i18n]'));
-      i18nEls.forEach(function (el) { el.dataset.i18nEn = el.innerHTML; });
-      const langEn = document.getElementById('langEn');
-      const langCn = document.getElementById('langCn');
+      // Use English even when a visitor previously selected Chinese.
+      const lang = 'en';
+      // To restore the language switch, remove the English-only declaration above
+      // and uncomment this initialization and the applyLang block below.
+      // let lang = 'en';
+      // try {
+      //   const savedLang = localStorage.getItem('homepage-lang');
+      //   if (savedLang === 'en' || savedLang === 'cn') lang = savedLang;
+      // } catch (e) { /* private mode */ }
+      // const i18nEls = Array.from(document.querySelectorAll('[data-i18n]'));
+      // i18nEls.forEach(function (el) { el.dataset.i18nEn = el.innerHTML; });
+      // const langEn = document.getElementById('langEn');
+      // const langCn = document.getElementById('langCn');
 
       const profileRole = document.querySelector('.profile-role');
       const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -339,6 +347,21 @@
       reducedMotion.addEventListener('change', syncRoleRotation);
       document.addEventListener('visibilitychange', syncRoleRotation);
       syncRoleRotation();
+
+      // Reveal each section once as it approaches the viewport. Content remains
+      // visible by default if motion is reduced or IntersectionObserver is absent.
+      if ('IntersectionObserver' in window && !reducedMotion.matches) {
+        const sectionObserver = new IntersectionObserver(function (entries, observer) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('section-arriving');
+            observer.unobserve(entry.target);
+          });
+        }, { rootMargin: '0px 0px 100px 0px', threshold: 0 });
+        document.querySelectorAll('.profile-card, .content-section, .mountain-footer').forEach(function (section) {
+          sectionObserver.observe(section);
+        });
+      }
 
       const newsList = document.querySelector('.compact-news');
       const newsToggle = document.getElementById('newsToggle');
@@ -384,26 +407,26 @@
       window.addEventListener('scroll', function () { backToTop.classList.toggle('visible', window.scrollY > 300); }, { passive: true });
       backToTop.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
 
-      function applyLang(next, persist) {
-        lang = next;
-        if (persist) { try { localStorage.setItem('homepage-lang', lang); } catch (e) { /* private mode */ } }
-        document.documentElement.lang = lang === 'cn' ? 'zh-CN' : 'en';
-        i18nEls.forEach(function (el) {
-          const cn = I18N.cn[el.dataset.i18n];
-          el.innerHTML = lang === 'cn' && cn ? cn : el.dataset.i18nEn;
-        });
-        langEn.classList.toggle('active', lang === 'en');
-        langCn.classList.toggle('active', lang === 'cn');
-        langEn.setAttribute('aria-pressed', String(lang === 'en'));
-        langCn.setAttribute('aria-pressed', String(lang === 'cn'));
-        newsToggle.innerHTML = newsList.classList.contains('expanded') ? STRINGS[lang].less : STRINGS[lang].more;
-        publicationToggle.innerHTML = publicationsExpanded ? STRINGS[lang].less : STRINGS[lang].more;
-        backToTop.title = STRINGS[lang].backToTop;
-        backToTop.setAttribute('aria-label', STRINGS[lang].backToTop);
-      }
-      langEn.addEventListener('click', function () { applyLang('en', true); });
-      langCn.addEventListener('click', function () { applyLang('cn', true); });
-      applyLang(lang, false);
+      // function applyLang(next, persist) {
+      //   lang = next;
+      //   if (persist) { try { localStorage.setItem('homepage-lang', lang); } catch (e) { /* private mode */ } }
+      //   document.documentElement.lang = lang === 'cn' ? 'zh-CN' : 'en';
+      //   i18nEls.forEach(function (el) {
+      //     const cn = I18N.cn[el.dataset.i18n];
+      //     el.innerHTML = lang === 'cn' && cn ? cn : el.dataset.i18nEn;
+      //   });
+      //   langEn.classList.toggle('active', lang === 'en');
+      //   langCn.classList.toggle('active', lang === 'cn');
+      //   langEn.setAttribute('aria-pressed', String(lang === 'en'));
+      //   langCn.setAttribute('aria-pressed', String(lang === 'cn'));
+      //   newsToggle.innerHTML = newsList.classList.contains('expanded') ? STRINGS[lang].less : STRINGS[lang].more;
+      //   publicationToggle.innerHTML = publicationsExpanded ? STRINGS[lang].less : STRINGS[lang].more;
+      //   backToTop.title = STRINGS[lang].backToTop;
+      //   backToTop.setAttribute('aria-label', STRINGS[lang].backToTop);
+      // }
+      // langEn.addEventListener('click', function () { applyLang('en', true); });
+      // langCn.addEventListener('click', function () { applyLang('cn', true); });
+      // applyLang(lang, false);
     })();
   </script>
   <script>
