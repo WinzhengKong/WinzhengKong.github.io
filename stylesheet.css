@@ -1263,7 +1263,8 @@ html[lang="zh-CN"] .profile-copy p {
   border-top: 1px solid #e9dfcf;
 }
 
-.profile-contacts a {
+.profile-contacts > a,
+.profile-email-toggle {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1274,15 +1275,104 @@ html[lang="zh-CN"] .profile-copy p {
   border: 1px solid #e4d7c2;
   border-radius: 8px;
   background: #fff;
+  color: #946019;
   font-size: 14px;
   font-weight: 700;
   transition: background-color 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
 }
 
-.profile-contacts a:hover {
+.profile-contacts > a:hover,
+.profile-email-toggle:hover {
   border-color: #b88c4b;
   background: #fbf4e8;
+  color: #65400d;
   text-decoration: none;
+}
+
+.profile-email-menu {
+  position: relative;
+  min-width: 0;
+}
+
+.profile-email-menu[open] {
+  z-index: 3;
+}
+
+.profile-email-toggle {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+  list-style: none;
+}
+
+.profile-email-toggle::-webkit-details-marker {
+  display: none;
+}
+
+.profile-email-toggle:focus-visible {
+  outline: 2px solid #946019;
+  outline-offset: 3px;
+}
+
+.profile-email-toggle .email-chevron {
+  position: absolute;
+  right: 14px;
+  width: 12px;
+  height: 12px;
+  transition: transform 180ms ease;
+}
+
+.profile-email-menu[open] .email-chevron {
+  transform: rotate(180deg);
+}
+
+.profile-email-options {
+  position: absolute;
+  top: 50%;
+  right: calc(100% + 12px);
+  z-index: 4;
+  width: 250px;
+  box-sizing: border-box;
+  display: grid;
+  gap: 4px;
+  padding: 8px;
+  border: 1px solid #e4d7c2;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 10px 28px rgba(75, 53, 22, 0.16);
+  transform: translateY(-50%);
+}
+
+.profile-email-entry {
+  display: grid;
+  gap: 1px;
+  padding: 8px;
+  color: #946019;
+  font-size: 12px;
+  line-height: 1.4;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.profile-email-label {
+  color: #82796c;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.profile-email-address {
+  user-select: text;
+}
+
+@media (max-width: 680px) {
+  .profile-email-options {
+    top: calc(100% + 8px);
+    right: auto;
+    left: 50%;
+    width: min(230px, calc(100vw - 72px));
+    transform: translateX(-50%);
+  }
 }
 
 .content-section {
@@ -1496,7 +1586,8 @@ html[lang="zh-CN"] .profile-copy p {
     box-shadow: 0 9px 22px rgba(61, 47, 27, 0.18);
   }
 
-  .profile-contacts a:hover {
+  .profile-contacts > a:hover,
+  .profile-email-toggle:hover {
     transform: translateY(-2px);
   }
 
@@ -1527,7 +1618,9 @@ html[lang="zh-CN"] .profile-copy p {
   .publications-table .publication-row,
   .paper-figure,
   .profile-photo img,
-  .profile-contacts a,
+  .profile-contacts > a,
+  .profile-email-toggle,
+  .email-chevron,
   .compact-news .news-item,
   .mountain-stage .mountain-img {
     transition: none;
