@@ -1054,12 +1054,12 @@ body {
   position: relative;
   isolation: isolate;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 235px;
+  grid-template-columns: minmax(0, 1fr) 220px;
   grid-template-areas: "header sidebar" "bio sidebar";
-  column-gap: 34px;
-  row-gap: 24px;
+  column-gap: 30px;
+  row-gap: 16px;
   margin: 0 var(--panel-inset);
-  padding: 36px;
+  padding: 30px;
   overflow: hidden;
   border: 1px solid var(--panel-border);
   border-radius: var(--panel-radius);
@@ -1073,7 +1073,7 @@ body {
   content: '';
   position: absolute;
   top: 0;
-  left: 36px;
+  left: 30px;
   width: 86px;
   height: 3px;
   border-radius: 0 0 3px 3px;
@@ -1087,7 +1087,7 @@ body {
 }
 
 .profile-kicker {
-  margin: 0 0 10px;
+  margin: 0 0 8px;
   color: #947039;
   font-size: 12px;
   font-weight: 700;
@@ -1124,7 +1124,7 @@ body {
   display: flex;
   align-items: center;
   height: 28px;
-  margin: 12px 0 0;
+  margin: 8px 0 0;
   color: #7d7262;
   font-size: 15px;
   line-height: 28px;
@@ -1184,8 +1184,12 @@ body {
 }
 
 .profile-copy p {
-  margin: 0 0 21px;
-  line-height: 1.85;
+  margin: 0 0 14px;
+  line-height: 1.65;
+}
+
+.profile-copy p:last-child {
+  margin-bottom: 0;
 }
 
 /* Chinese-page biography typography.
@@ -1217,7 +1221,7 @@ html[lang="zh-CN"] .profile-copy p {
   grid-area: sidebar;
   align-self: start;
   min-width: 0;
-  margin: 8px 0 0;
+  margin: 4px 0 0;
 }
 
 .profile-photo {
@@ -1229,7 +1233,7 @@ html[lang="zh-CN"] .profile-copy p {
 .profile-photo img {
   display: block;
   width: 100%;
-  max-width: 235px;
+  max-width: 220px;
   height: auto;
   box-sizing: border-box;
   margin: 0 auto;
@@ -1241,8 +1245,8 @@ html[lang="zh-CN"] .profile-copy p {
 
 .profile-photo figcaption {
   display: grid;
-  gap: 6px;
-  margin-top: 16px;
+  gap: 4px;
+  margin-top: 12px;
   color: #82796c;
   font-size: 13px;
   line-height: 1.5;
@@ -1257,9 +1261,9 @@ html[lang="zh-CN"] .profile-copy p {
 .profile-contacts {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  gap: 10px;
-  margin-top: 22px;
-  padding-top: 20px;
+  gap: 8px;
+  margin-top: 16px;
+  padding-top: 14px;
   border-top: 1px solid #e9dfcf;
 }
 
@@ -1269,7 +1273,7 @@ html[lang="zh-CN"] .profile-copy p {
   align-items: center;
   justify-content: center;
   gap: 6px;
-  min-height: 44px;
+  min-height: 40px;
   padding: 0 14px;
   box-sizing: border-box;
   border: 1px solid #e4d7c2;
@@ -1829,9 +1833,9 @@ html[lang="zh-CN"] .profile-copy p {
   .profile-card {
     grid-template-columns: minmax(0, 1fr);
     grid-template-areas: "header" "sidebar" "bio";
-    gap: 22px;
+    gap: 16px;
     margin: 0 var(--panel-inset);
-    padding: 24px 20px;
+    padding: 22px 18px;
     border-radius: var(--panel-radius);
   }
 
@@ -1851,7 +1855,7 @@ html[lang="zh-CN"] .profile-copy p {
   }
 
   .profile-photo img {
-    width: 160px;
+    width: 150px;
   }
 
   .profile-photo figcaption {
